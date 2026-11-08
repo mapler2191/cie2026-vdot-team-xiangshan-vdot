@@ -1,0 +1,22 @@
+vdot.vv competition extension
+Copyright 2026 vdot-team
+
+This repository includes patches and code snippets derived from:
+
+- XiangShan (https://github.com/OpenXiangShan/XiangShan)
+  Licensed under the Apache License, Version 2.0.
+
+- NEMU (https://github.com/OpenXiangShan/NEMU)
+  Licensed under the Mulan PSL v2.
+
+- RISC-V Vector specification (https://github.com/riscv/riscv-v-spec)
+  Used as the semantic reference for standard vector instructions.
+
+The files under `rtl/xiangshan/` and `nemu/` are patches against the pinned
+upstream commits listed in `env/ENVIRONMENT.md`. They are provided for the
+2026 CIE competition submission. Applying them does not change the upstream
+license terms.
+
+The standalone `rtl/standalone/vdot8.sv`, the software tests, the Python
+tools, and the documentation are original work of vdot-team and are released
+under the Apache License, Version 2.0 (see LICENSE).

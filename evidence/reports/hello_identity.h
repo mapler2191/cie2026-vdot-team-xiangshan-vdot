@@ -1,0 +1,6 @@
+#ifndef HELLO_IDENTITY_H
+#define HELLO_IDENTITY_H
+#define HELLO_IDENTITY_CONFIGURED 1
+#define HELLO_TEAM "vdot-team"
+#define HELLO_VM_IP "192.168.124.133"
+#endif

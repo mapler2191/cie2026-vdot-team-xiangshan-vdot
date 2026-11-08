@@ -1,0 +1,145 @@
+# cmd: D:\RISV\tools\oss-cad-suite\bin\vvp.exe C:\Users\lenovo\AppData\Local\Temp\dsh-zKE1oN\paramverify\mut-wrong_valid_latency.vvp
+# cwd: C:\Users\lenovo\AppData\Local\Temp\dsh-zKE1oN\paramverify
+# rc: 0
+FAIL t=4 unexpected outValid, result=0
+FAIL t=315 expected outValid, got 0
+FAIL t=316 unexpected outValid, result=7104
+FAIL t=319 expected outValid, got 0
+FAIL t=321 unexpected outValid, result=-5332
+FAIL t=324 expected outValid, got 0
+FAIL t=328 unexpected outValid, result=5604
+FAIL t=330 expected outValid, got 0
+FAIL t=333 unexpected outValid, result=11575
+FAIL t=339 expected outValid, got 0
+FAIL t=340 unexpected outValid, result=7231
+FAIL t=342 expected outValid, got 0
+FAIL t=343 unexpected outValid, result=3368
+FAIL t=344 expected outValid, got 0
+FAIL t=346 unexpected outValid, result=-37541
+FAIL t=348 expected outValid, got 0
+FAIL t=356 unexpected outValid, result=21087
+FAIL t=357 expected outValid, got 0
+FAIL t=361 unexpected outValid, result=-18699
+FAIL t=363 expected outValid, got 0
+FAIL t=364 unexpected outValid, result=-24084
+FAIL t=368 expected outValid, got 0
+FAIL t=370 unexpected outValid, result=20802
+FAIL t=373 expected outValid, got 0
+FAIL t=374 unexpected outValid, result=-2232
+FAIL t=377 expected outValid, got 0
+FAIL t=378 unexpected outValid, result=-9299
+FAIL t=380 expected outValid, got 0
+FAIL t=382 unexpected outValid, result=2836
+FAIL t=385 expected outValid, got 0
+FAIL t=386 unexpected outValid, result=-7598
+FAIL t=387 expected outValid, got 0
+FAIL t=388 unexpected outValid, result=-11927
+FAIL t=389 expected outValid, got 0
+FAIL t=392 unexpected outValid, result=-6974
+FAIL t=393 expected outValid, got 0
+FAIL t=394 unexpected outValid, result=-12762
+FAIL t=396 expected outValid, got 0
+FAIL t=397 unexpected outValid, result=-17135
+FAIL t=399 expected outValid, got 0
+FAIL t=401 unexpected outValid, result=6683
+FAIL t=404 expected outValid, got 0
+FAIL t=406 unexpected outValid, result=33991
+FAIL t=413 expected outValid, got 0
+FAIL t=415 unexpected outValid, result=394
+FAIL t=416 expected outValid, got 0
+FAIL t=417 unexpected outValid, result=7280
+FAIL t=420 expected outValid, got 0
+FAIL t=421 unexpected outValid, result=232
+FAIL t=424 expected outValid, got 0
+FAIL t=425 unexpected outValid, result=25706
+FAIL t=426 expected outValid, got 0
+FAIL t=429 unexpected outValid, result=-16469
+FAIL t=433 expected outValid, got 0
+FAIL t=435 unexpected outValid, result=-3730
+FAIL t=436 expected outValid, got 0
+FAIL t=439 unexpected outValid, result=16332
+FAIL t=440 expected outValid, got 0
+FAIL t=442 unexpected outValid, result=-45276
+FAIL t=444 expected outValid, got 0
+FAIL t=450 unexpected outValid, result=-9222
+FAIL t=451 expected outValid, got 0
+FAIL t=452 unexpected outValid, result=-5314
+FAIL t=454 expected outValid, got 0
+FAIL t=455 unexpected outValid, result=-1985
+FAIL t=458 expected outValid, got 0
+FAIL t=460 unexpected outValid, result=9503
+FAIL t=462 expected outValid, got 0
+FAIL t=463 unexpected outValid, result=3180
+FAIL t=465 expected outValid, got 0
+FAIL t=469 unexpected outValid, result=1023
+FAIL t=470 expected outValid, got 0
+FAIL t=471 unexpected outValid, result=-12329
+FAIL t=472 expected outValid, got 0
+FAIL t=475 unexpected outValid, result=-28627
+FAIL t=476 expected outValid, got 0
+FAIL t=479 unexpected outValid, result=-17705
+FAIL t=481 expected outValid, got 0
+FAIL t=485 unexpected outValid, result=-9881
+FAIL t=486 expected outValid, got 0
+FAIL t=487 unexpected outValid, result=-11262
+FAIL t=489 expected outValid, got 0
+FAIL t=490 unexpected outValid, result=-16683
+FAIL t=493 expected outValid, got 0
+FAIL t=494 unexpected outValid, result=-20352
+FAIL t=498 expected outValid, got 0
+FAIL t=501 unexpected outValid, result=-3339
+FAIL t=503 expected outValid, got 0
+FAIL t=506 unexpected outValid, result=-4892
+FAIL t=507 expected outValid, got 0
+FAIL t=509 unexpected outValid, result=1193
+FAIL t=513 expected outValid, got 0
+FAIL t=515 unexpected outValid, result=3942
+FAIL t=519 expected outValid, got 0
+FAIL t=521 unexpected outValid, result=17440
+FAIL t=523 expected outValid, got 0
+FAIL t=524 unexpected outValid, result=10436
+FAIL t=525 expected outValid, got 0
+FAIL t=526 unexpected outValid, result=-3760
+FAIL t=528 expected outValid, got 0
+FAIL t=530 unexpected outValid, result=8731
+FAIL t=534 expected outValid, got 0
+FAIL t=535 unexpected outValid, result=925
+FAIL t=538 expected outValid, got 0
+FAIL t=539 unexpected outValid, result=3164
+FAIL t=540 expected outValid, got 0
+FAIL t=541 unexpected outValid, result=-6655
+FAIL t=542 expected outValid, got 0
+FAIL t=543 unexpected outValid, result=-10535
+FAIL t=547 expected outValid, got 0
+FAIL t=548 unexpected outValid, result=-13040
+FAIL t=549 expected outValid, got 0
+FAIL t=550 unexpected outValid, result=20986
+FAIL t=551 expected outValid, got 0
+FAIL t=554 unexpected outValid, result=25252
+FAIL t=559 expected outValid, got 0
+FAIL t=560 unexpected outValid, result=-8744
+FAIL t=561 expected outValid, got 0
+FAIL t=564 unexpected outValid, result=-5954
+FAIL t=569 expected outValid, got 0
+FAIL t=571 unexpected outValid, result=-15811
+FAIL t=572 expected outValid, got 0
+FAIL t=574 unexpected outValid, result=6758
+FAIL t=580 expected outValid, got 0
+FAIL t=581 unexpected outValid, result=4215
+FAIL t=582 expected outValid, got 0
+FAIL t=584 unexpected outValid, result=9972
+FAIL t=588 expected outValid, got 0
+FAIL t=589 unexpected outValid, result=-12418
+FAIL t=592 expected outValid, got 0
+FAIL t=593 unexpected outValid, result=-18931
+FAIL t=595 expected outValid, got 0
+FAIL t=597 unexpected outValid, result=11252
+FAIL t=604 expected outValid, got 0
+FAIL t=605 unexpected outValid, result=12658
+FAIL t=607 expected outValid, got 0
+FAIL t=609 unexpected outValid, result=-18088
+FAIL t=614 expected outValid, got 0
+TB n=8 expected=479 checked=479 outputs=410 errors=138
+FAIL output count 410 != expected 479
+PARAM_RTL_RESULT n=8 FAIL errors=139
+C:\Users\lenovo\AppData\Local\Temp\dsh-zKE1oN\paramverify\tb-n8.sv:381: $finish called at 6170000 (1ps)

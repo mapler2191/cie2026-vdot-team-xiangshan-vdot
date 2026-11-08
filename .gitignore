@@ -1,0 +1,34 @@
+# build / simulation outputs
+build/
+*.o
+*.d
+*.vvp
+*.vcd
+*.fst
+*.wlf
+*.vcd.tmp
+
+# keep curated evidence
+!evidence/waves/*.fst
+!evidence/waves/*.vcd
+!results/**/*.vcd
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+
+# tools (too large for git)
+tools/oss-cad-suite/
+tools/oss-cad-suite.tgz
+
+# private submission material
+submission.asc
+submission/my_submission.filled.txt
+
+# editor / OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

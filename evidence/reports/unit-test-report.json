@@ -1,0 +1,15 @@
+{
+  "status": "pass",
+  "scope": "standalone RTL (rtl/standalone/vdot8.sv), NOT XiangShan difftest",
+  "timestamp_utc": "2026-10-31T06:36:20.900336+00:00",
+  "simulator": "Icarus Verilog version 14.0 (devel) (s20260301-649-g1a663cb33-dirty)",
+  "oracle_vectors": 69656,
+  "checked_outputs": 69657,
+  "cancelled_transactions": 4,
+  "seed": 20261023,
+  "sha256": {
+    "rtl/standalone/vdot8.sv": "1270d307e623613eed3c47931c9bfae52e078d43fc7220b1fbb08f16eb414e80",
+    "tests/tb_vdot8.sv": "06ec48fb0399847ee5e980aa06d691976ece6d0bbafd1d562a5ef839344a72ce",
+    "evidence/vectors/vectors.hex": "896a78eb68abd695cb96597cf568fc5f5ec45ef309a7a00ae7b0de6447f8deb5"
+  }
+}

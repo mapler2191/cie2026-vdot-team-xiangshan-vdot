@@ -1,0 +1,210 @@
+{
+  "fst_sha256": "b257a425a9ae0965f9cb205b1eb955d4b4d026dbe3e511acd6fc422a8d6454e8",
+  "checks": [
+    {
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.decodePipeRenameModule.io_in_valid",
+      "sample": 2514,
+      "value": "0x1"
+    },
+    {
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.decodePipeRenameModule.io_in_ready",
+      "sample": 2514,
+      "value": "0x1"
+    },
+    {
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.decodePipeRenameModule.io_in_bits_pc",
+      "sample": 2514,
+      "value": "0x80000044"
+    },
+    {
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.decodePipeRenameModule.io_in_bits_instr",
+      "sample": 2514,
+      "value": "0x21101d7"
+    },
+    {
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.decodePipeRenameModule.io_out_valid",
+      "sample": 2515,
+      "value": "0x1"
+    },
+    {
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.decodePipeRenameModule.io_out_ready",
+      "sample": 2515,
+      "value": "0x1"
+    },
+    {
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.decodePipeRenameModule.io_out_bits_pc",
+      "sample": 2515,
+      "value": "0x80000044"
+    },
+    {
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.decodePipeRenameModule.io_out_bits_instr",
+      "sample": 2515,
+      "value": "0x21101d7"
+    },
+    {
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_valid",
+      "sample": 2516,
+      "value": "0x1"
+    },
+    {
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_ready",
+      "sample": 2516,
+      "value": "0x1"
+    },
+    {
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_bits_pc",
+      "sample": 2516,
+      "value": "0x80000044"
+    },
+    {
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_bits_robIdx_flag",
+      "sample": 2516,
+      "value": "0x1"
+    },
+    {
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_bits_robIdx_value",
+      "sample": 2516,
+      "value": "0x21"
+    },
+    {
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_bits_pdest",
+      "sample": 2516,
+      "value": "0x33"
+    },
+    {
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVfalu.io_deqDelay_0_valid",
+      "sample": 2538,
+      "value": "0x1"
+    },
+    {
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVfalu.io_deqDelay_0_ready",
+      "sample": 2538,
+      "value": "0x1"
+    },
+    {
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVfalu.io_deqDelay_0_bits_common_robIdx_flag",
+      "sample": 2538,
+      "value": "0x1"
+    },
+    {
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVfalu.io_deqDelay_0_bits_common_robIdx_value",
+      "sample": 2538,
+      "value": "0x21"
+    },
+    {
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVfalu.io_deqDelay_0_bits_common_pdest",
+      "sample": 2538,
+      "value": "0x33"
+    },
+    {
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_2.VialuFix.io_in_valid",
+      "sample": 2541,
+      "value": "0x1"
+    },
+    {
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_2.VialuFix.io_in_ready",
+      "sample": 2541,
+      "value": "0x1"
+    },
+    {
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_2.VialuFix.io_in_bits_data_src_0",
+      "sample": 2541,
+      "value": "0x1e1c1a18161412100e0c0a0806040200"
+    },
+    {
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_2.VialuFix.io_in_bits_data_src_1",
+      "sample": 2541,
+      "value": "0xf0e0d0c0b0a09080706050403020100"
+    },
+    {
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_2.VialuFix.io_out_valid",
+      "sample": 2542,
+      "value": "0x1"
+    },
+    {
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_2.VialuFix.io_out_ready",
+      "sample": 2542,
+      "value": "0x1"
+    },
+    {
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_2.VialuFix.io_out_bits_ctrl_robIdx_flag",
+      "sample": 2542,
+      "value": "0x1"
+    },
+    {
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_2.VialuFix.io_out_bits_ctrl_robIdx_value",
+      "sample": 2542,
+      "value": "0x21"
+    },
+    {
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_2.VialuFix.io_out_bits_ctrl_pdest",
+      "sample": 2542,
+      "value": "0x33"
+    },
+    {
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_2.VialuFix.io_out_bits_ctrl_vecWen",
+      "sample": 2542,
+      "value": "0x1"
+    },
+    {
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_2.VialuFix.io_out_bits_res_data",
+      "sample": 2542,
+      "value": "0x2d2a2724211e1b1815120f0c09060300"
+    },
+    {
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.rob.io_commits_isCommit",
+      "sample": 2544,
+      "value": "0x1"
+    },
+    {
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.rob.io_commits_commitValid_0",
+      "sample": 2544,
+      "value": "0x1"
+    },
+    {
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.rob.io_commits_info_0_debug_pc",
+      "sample": 2544,
+      "value": "0x80000044"
+    },
+    {
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.rob.io_commits_commitValid_0",
+      "sample": 2543,
+      "value": "0x0"
+    }
+  ],
+  "signals": {
+    "decode_in_valid": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.decodePipeRenameModule.io_in_valid",
+    "decode_in_ready": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.decodePipeRenameModule.io_in_ready",
+    "decode_in_bits_pc": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.decodePipeRenameModule.io_in_bits_pc",
+    "decode_in_bits_instr": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.decodePipeRenameModule.io_in_bits_instr",
+    "decode_out_valid": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.decodePipeRenameModule.io_out_valid",
+    "decode_out_ready": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.decodePipeRenameModule.io_out_ready",
+    "decode_out_bits_pc": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.decodePipeRenameModule.io_out_bits_pc",
+    "decode_out_bits_instr": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.decodePipeRenameModule.io_out_bits_instr",
+    "dispatch_valid": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_valid",
+    "dispatch_ready": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_ready",
+    "dispatch_bits_pc": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_bits_pc",
+    "dispatch_bits_robIdx_flag": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_bits_robIdx_flag",
+    "dispatch_bits_robIdx_value": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_bits_robIdx_value",
+    "dispatch_bits_pdest": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_bits_pdest",
+    "issue_valid": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVfalu.io_deqDelay_0_valid",
+    "issue_ready": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVfalu.io_deqDelay_0_ready",
+    "issue_bits_common_robIdx_flag": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVfalu.io_deqDelay_0_bits_common_robIdx_flag",
+    "issue_bits_common_robIdx_value": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVfalu.io_deqDelay_0_bits_common_robIdx_value",
+    "issue_bits_common_pdest": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVfalu.io_deqDelay_0_bits_common_pdest",
+    "alu_io_in_valid": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_2.VialuFix.io_in_valid",
+    "alu_io_in_ready": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_2.VialuFix.io_in_ready",
+    "alu_io_in_bits_data_src_0": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_2.VialuFix.io_in_bits_data_src_0",
+    "alu_io_in_bits_data_src_1": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_2.VialuFix.io_in_bits_data_src_1",
+    "alu_io_out_valid": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_2.VialuFix.io_out_valid",
+    "alu_io_out_ready": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_2.VialuFix.io_out_ready",
+    "alu_io_out_bits_ctrl_robIdx_flag": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_2.VialuFix.io_out_bits_ctrl_robIdx_flag",
+    "alu_io_out_bits_ctrl_robIdx_value": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_2.VialuFix.io_out_bits_ctrl_robIdx_value",
+    "alu_io_out_bits_ctrl_pdest": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_2.VialuFix.io_out_bits_ctrl_pdest",
+    "alu_io_out_bits_ctrl_vecWen": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_2.VialuFix.io_out_bits_ctrl_vecWen",
+    "alu_io_out_bits_res_data": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_2.VialuFix.io_out_bits_res_data",
+    "commit_isCommit": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.rob.io_commits_isCommit",
+    "commit_commitValid_0": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.rob.io_commits_commitValid_0",
+    "commit_info_0_debug_pc": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.rob.io_commits_info_0_debug_pc"
+  }
+}

@@ -1,0 +1,6 @@
+755c80de1eebdd3fad8a20f22838382ace8981554f85e869e7e6333f5ee1bfd3  xs-env/XiangShan/build/emu
+69249b1524ddde67181db4c20dfa3dcfa46a59a41e70c91d320fcc071a93920e  xs-env/NEMU/build/riscv64-nemu-interpreter-so
+fea548655a8b6eecacace83e2f4380a18b8aa83bce964c8aae4cffbe2f5a9724  artifacts/boot-minimal.bin
+86646a2daae01b773a98be4072f776f9312eb3a9025e563759bd279cc8adb432  project/software/build/vdot-a0.bin
+bffafce7d20f5a5ef3462fb0d5925f2202294dac65ca8122ffd04050014cb48a  project/software/build/vadd-a0.bin
+200a159007564672757300d5e38bac491a78906264861b30c2d1f59443c7bc6c  project/software/build/exception-check-a0.bin

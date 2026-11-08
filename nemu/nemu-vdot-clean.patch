@@ -1,0 +1,75 @@
+--- a/src/isa/riscv64/instr/decode.c
++++ b/src/isa/riscv64/instr/decode.c
+@@ -97,6 +97,7 @@
+   def_INSTR_TAB  ("??????? ????? ????? ??? ????? 10100 ??",         op_fp);
+ #endif // CONFIG_FPU_NONE
+ #ifdef CONFIG_RVV
++  def_INSTR_IDTAB("0000001 ????? ????? 010 ????? 00010 11", OP_V, vdot);
+   def_INSTR_IDTAB("??????? ????? ????? ??? ????? 10101 ??", OP_V  , OP_V);
+ #endif // CONFIG_RVV
+ #ifdef CONFIG_RV_AME
+--- a/src/isa/riscv64/include/isa-all-instr.h
++++ b/src/isa/riscv64/include/isa-all-instr.h
+@@ -155,7 +155,7 @@
+ 
+ #ifdef CONFIG_RVV
+ #define VECTOR_INSTR_TERNARY(f) \
+-  f(vadd) f(vsub) f(vrsub) f(vminu) f(vmin) \
++  f(vdot) f(vadd) f(vsub) f(vrsub) f(vminu) f(vmin) \
+   f(vmaxu) f(vmax) f(vand) f(vor) f(vxor) \
+   f(vrgather) f(vrgatherei16) \
+   f(vadc) f(vmadc) f(vsbc) f(vmsbc) \
+--- a/src/isa/riscv64/instr/rvv/vcompute.h
++++ b/src/isa/riscv64/instr/rvv/vcompute.h
+@@ -18,6 +18,33 @@
+ 
+ #include "vcompute_impl.h"
+ #include "vcommon.h"
++
++
++// CIE convention: eight low int8 pairs, int32 result, zero upper 96 bits.
++// Read all sources before writing, so vd may alias either source (or v0).
++// Custom: vdot illegal config exception reports mtval=0 (matches RTL behavior)
++extern int vdot_illegal_no_tval;
++
++def_EHelper(vdot) {
++  require_vector(true);
++  if (vtype->vsew != 0 || vtype->vlmul != 0 || vl->val != 8 ||
++      vstart->val != 0 || s->vm != 1) {
++    vdot_illegal_no_tval = 1;
++    longjmp_exception(EX_II);
++  }
++  int32_t sum = 0;
++  for (int i = 0; i < 8; i++) {
++    int32_t a = vreg_b(id_src->reg, i);
++    int32_t b = vreg_b(id_src2->reg, i);
++    if (a >= 128) a -= 256;
++    if (b >= 128) b -= 256;
++    sum += a * b;
++  }
++  set_vreg(id_dest->reg, 0, (uint32_t)sum, 3, 0, 0);
++  set_vreg(id_dest->reg, 1, 0, 3, 0, 0);
++  vstart->val = 0;
++  vp_set_dirty();
++}
+ 
+ def_EHelper(vadd) {
+   ARITH(ADD, SIGNED)
+--- a/src/isa/riscv64/system/intr.c
++++ b/src/isa/riscv64/system/intr.c
+@@ -1,3 +1,4 @@
++int vdot_illegal_no_tval = 0;
+ /***************************************************************************************
+ * Copyright (c) 2014-2021 Zihao Yu, Nanjing University
+ * Copyright (c) 2020-2022 Institute of Computing Technology, Chinese Academy of Sciences
+@@ -286,7 +287,9 @@
+       case EX_IGPF: case EX_LGPF: case EX_SGPF:
+         break;
+       case EX_II: case EX_VI:
+-        mtval->val = MUXDEF(CONFIG_TVAL_EX_II, cpu.instr, 0);
++        extern int vdot_illegal_no_tval;
++        mtval->val = (vdot_illegal_no_tval) ? 0 : MUXDEF(CONFIG_TVAL_EX_II, cpu.instr, 0);
++        vdot_illegal_no_tval = 0;  // reset after use
+         IFDEF(CONFIG_RVH, mtval2->val = 0);
+         IFDEF(CONFIG_RVH, mtinst->val = 0);
+         break;

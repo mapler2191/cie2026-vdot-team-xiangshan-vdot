@@ -1,0 +1,120 @@
+diff --git a/src/main/scala/xiangshan/backend/decode/DecodeUnit.scala b/src/main/scala/xiangshan/backend/decode/DecodeUnit.scala
+index 5b1419eaa..33beef185 100644
+--- a/src/main/scala/xiangshan/backend/decode/DecodeUnit.scala
++++ b/src/main/scala/xiangshan/backend/decode/DecodeUnit.scala
+@@ -903,7 +903,10 @@ class DecodeUnit(implicit p: Parameters) extends XSModule with DecodeUnitConstan
+     (io.fromCSR.illegalInst.cboCF || !HasCMO.B) && (isCboClean || isCboFlush) ||
+     (io.fromCSR.illegalInst.cboI  || !HasCMO.B) && isCboInval ||
+     isAes64ks1iIllegal ||
+-    isAmocasQIllegal
++    isAmocasQIllegal ||
++    (xiangshan.backend.fu.wrapper.VdotSpec.instruction === inst.ALL &&
++      (io.enq.vtype.illegal || io.enq.vtype.vsew =/= 0.U ||
++       io.enq.vtype.vlmul =/= 0.U || io.enq.vstart =/= 0.U))
+ 
+   private val exceptionVI =
+     io.fromCSR.virtualInst.sfenceVMA  && FuType.FuTypeOrR(decodedInst.fuType, FuType.fence) && decodedInst.fuOpType === FenceOpType.sfence ||
+diff --git a/src/main/scala/xiangshan/backend/decode/VecDecoder.scala b/src/main/scala/xiangshan/backend/decode/VecDecoder.scala
+index 376419107..50a2c71c4 100644
+--- a/src/main/scala/xiangshan/backend/decode/VecDecoder.scala
++++ b/src/main/scala/xiangshan/backend/decode/VecDecoder.scala
+@@ -393,6 +393,7 @@ object VecDecoder extends DecodeConstants {
+     VMSBF_M      -> OPMVV(T, FuType.vipu, VipuType.vmsbf_m, F, T, F, UopSplitType.dummy, src1 = SrcType.no), // vmsbf.m vd, vs2, vm
+     VMSIF_M      -> OPMVV(T, FuType.vipu, VipuType.vmsif_m, F, T, F, UopSplitType.dummy, src1 = SrcType.no), // vmsif.m vd, vs2, vm
+     VMSOF_M      -> OPMVV(T, FuType.vipu, VipuType.vmsof_m, F, T, F, UopSplitType.dummy, src1 = SrcType.no), // vmsof.m vd, vs2, vm
++    xiangshan.backend.fu.wrapper.VdotSpec.instruction -> OPMVV(T, FuType.vimac, xiangshan.backend.fu.wrapper.VdotSpec.fuOp, F, T, F, UopSplitType.VEC_VVV),
+     VMUL_VV      -> OPMVV(T, FuType.vimac, VimacType.vmul, F, T, F, UopSplitType.VEC_VVV),
+     VMULH_VV     -> OPMVV(T, FuType.vimac, VimacType.vmulh, F, T, F, UopSplitType.VEC_VVV),
+     VMULHSU_VV   -> OPMVV(T, FuType.vimac, VimacType.vmulhsu, F, T, F, UopSplitType.VEC_VVV),
+diff --git a/src/main/scala/xiangshan/backend/decode/isa/bitfield/RiscvInst.scala b/src/main/scala/xiangshan/backend/decode/isa/bitfield/RiscvInst.scala
+index c553020a4..a0423553f 100644
+--- a/src/main/scala/xiangshan/backend/decode/isa/bitfield/RiscvInst.scala
++++ b/src/main/scala/xiangshan/backend/decode/isa/bitfield/RiscvInst.scala
+@@ -91,7 +91,8 @@ trait BitFieldsVec { this: Riscv32BitInst =>
+   }
+ 
+   def isVecArith = {
+-    this.OPCODE5Bit === xiangshan.backend.decode.isa.bitfield.OPCODE5Bit.OP_V
++    this.OPCODE5Bit === xiangshan.backend.decode.isa.bitfield.OPCODE5Bit.OP_V ||
++      xiangshan.backend.fu.wrapper.VdotSpec.instruction === this.ALL
+   }
+ 
+   def isOPIVV = {
+diff --git a/src/main/scala/xiangshan/backend/fu/wrapper/VIMacU.scala b/src/main/scala/xiangshan/backend/fu/wrapper/VIMacU.scala
+index 27eb8012e..e67286a59 100644
+--- a/src/main/scala/xiangshan/backend/fu/wrapper/VIMacU.scala
++++ b/src/main/scala/xiangshan/backend/fu/wrapper/VIMacU.scala
+@@ -45,6 +45,16 @@ class VIMacSrcTypeModule extends VecSrcTypeModule {
+ class VIMacU(cfg: FuConfig)(implicit p: Parameters) extends VecPipedFuncUnit(cfg) {
+   XSError(io.in.valid && io.in.bits.ctrl.fuOpType === VimacType.dummy, "VialuF OpType not supported")
+ 
++  // CIE vdot uses the same issue port, ROB tags and vector writeback.
++  private val isDot = VdotSpec.isDot(fuOpType)
++  private val outIsDot = VdotSpec.isDot(outCtrl.fuOpType)
++  private val dot = Module(new Vdot8Datapath)
++  require(cfg.destDataBits == 128 && latency == 2)
++  dot.io.vs1 := vs1
++  dot.io.vs2 := vs2
++  dot.io.enable1 := regEnable(1) && isDot
++  dot.io.enable2 := regEnable(2)
++
+   // params alias
+   private val dataWidth = cfg.destDataBits
+   private val dataWidthOfDataModule = 64
+@@ -98,7 +108,7 @@ class VIMacU(cfg: FuConfig)(implicit p: Parameters) extends VecPipedFuncUnit(cfg
+ 
+   vimacs.zipWithIndex.foreach {
+     case (mod, i) =>
+-      mod.io.fire        := io.in.valid
++      mod.io.fire        := io.in.valid && !isDot
+       mod.io.info.vm     := vm
+       mod.io.info.ma     := vma
+       mod.io.info.ta     := vta
+@@ -145,7 +155,9 @@ class VIMacU(cfg: FuConfig)(implicit p: Parameters) extends VecPipedFuncUnit(cfg
+   mgu.io.in.info.dstMask := 0.B
+   mgu.io.in.isIndexedVls := false.B
+ 
+-  io.out.bits.res.data := mgu.io.out.vd
+-  io.out.bits.res.vxsat.get := (outVxsat & mgu.io.out.active).orR
+-  io.out.bits.ctrl.exceptionVec.get(ExceptionNO.illegalInstr) := mgu.io.out.illegal
++  io.out.bits.res.data := Mux(outIsDot, dot.io.vd, mgu.io.out.vd)
++  io.out.bits.res.vxsat.get := !outIsDot && (outVxsat & mgu.io.out.active).orR
++  val dotIllegal = outVecCtrl.vill || outVecCtrl.vsew =/= 0.U ||
++    outVecCtrl.vlmul =/= 0.U || outVl =/= 8.U || outVstart =/= 0.U || !outVm
++  io.out.bits.ctrl.exceptionVec.get(ExceptionNO.illegalInstr) := Mux(outIsDot, dotIllegal, mgu.io.out.illegal)
+ }
+diff --git a/src/main/scala/xiangshan/backend/fu/wrapper/Vdot8Datapath.scala b/src/main/scala/xiangshan/backend/fu/wrapper/Vdot8Datapath.scala
+new file mode 100644
+--- /dev/null
++++ b/src/main/scala/xiangshan/backend/fu/wrapper/Vdot8Datapath.scala
+@@ -0,0 +1,30 @@
++package xiangshan.backend.fu.wrapper
++
++import chisel3._
++import chisel3.util._
++
++// Local competition extension, not a ratified RISC-V instruction.
++object VdotSpec {
++  val instruction = BitPat("b0000001??????????010?????0001011")
++  val fuOp = BitPat("b100000000")
++  def isDot(op: UInt): Bool = op === "h100".U
++}
++
++// Controls, ROB redirects and valid tracking stay in the existing VIMacU.
++class Vdot8Datapath extends Module {
++  val io = IO(new Bundle {
++    val vs1 = Input(UInt(128.W))
++    val vs2 = Input(UInt(128.W))
++    val enable1 = Input(Bool())
++    val enable2 = Input(Bool())
++    val vd = Output(UInt(128.W))
++  })
++  val products = (0 until 8).map { i =>
++    RegEnable(io.vs1(8*i+7,8*i).asSInt * io.vs2(8*i+7,8*i).asSInt, io.enable1)
++  }
++  val pairs = products.grouped(2).map(x => x(0) +& x(1)).toSeq
++  val halves = pairs.grouped(2).map(x => x(0) +& x(1)).toSeq
++  val sum = halves(0) +& halves(1)
++  val result = RegEnable(sum.pad(32).asUInt, io.enable2)
++  io.vd := Cat(0.U(96.W), result)
++}

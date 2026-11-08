@@ -1,0 +1,8 @@
+=== emu-fst ===
+71c3acbcc7d418ec6404d796ac908d096fe346e923b7403f90493985ca637f5d  /home/maple/risv/xs-env/XiangShan/build/emu-fst
+=== nemu ===
+2019d71776cf3457d6c65b62d5289a2324cce55eac819d31abe5642e75af5fad  /home/maple/risv/xs-env/NEMU/build/riscv64-nemu-interpreter-so
+=== boot ===
+fea548655a8b6eecacace83e2f4380a18b8aa83bce964c8aae4cffbe2f5a9724  /home/maple/risv/artifacts/boot-minimal.bin
+=== config ===
+MinimalConfig (FST build)

@@ -1,0 +1,6 @@
+# cmd: D:\RISV\tools\oss-cad-suite\bin\vvp.exe C:\Users\lenovo\AppData\Local\Temp\dsh-zKE1oN\paramverify\sim-n8.vvp
+# cwd: C:\Users\lenovo\AppData\Local\Temp\dsh-zKE1oN\paramverify
+# rc: 0
+TB n=8 expected=479 checked=479 outputs=479 errors=0
+PARAM_RTL_RESULT n=8 PASS
+C:\Users\lenovo\AppData\Local\Temp\dsh-zKE1oN\paramverify\tb-n8.sv:381: $finish called at 6170000 (1ps)

@@ -1,0 +1,212 @@
+{
+  "seed": 20261104,
+  "iverilog": "D:\\RISV\\tools\\oss-cad-suite\\bin\\iverilog.exe",
+  "random_cycles": 300,
+  "bubble_cycles": 300,
+  "iverilog_version": "Icarus Verilog version 14.0 (devel) (s20260301-649-g1a663cb33-dirty)",
+  "configs": [
+    {
+      "n": 4,
+      "source": "results\\integration-tests\\n4-verilog\\VdotParametric.sv",
+      "source_bytes": 9138,
+      "source_sha256": "ddef2ee706711e350611b89935b37037404c46b281218a11518606739ff33dad",
+      "directed_cases": [
+        {
+          "label": "all_127x127",
+          "expected": 64516
+        },
+        {
+          "label": "all_m128x_m128",
+          "expected": 65536
+        },
+        {
+          "label": "all_m128x127",
+          "expected": -65024
+        },
+        {
+          "label": "all_127x_m128",
+          "expected": -65024
+        },
+        {
+          "label": "zeros",
+          "expected": 0
+        },
+        {
+          "label": "alt_127_m128_x_127",
+          "expected": -254
+        },
+        {
+          "label": "ramp_x_neg_ramp",
+          "expected": -20
+        },
+        {
+          "label": "all_m1x_m1",
+          "expected": 4
+        },
+        {
+          "label": "all_127x_m1",
+          "expected": -508
+        },
+        {
+          "label": "mixed",
+          "expected": -254
+        }
+      ],
+      "compile_rc": 0,
+      "sim_rc": 0,
+      "fails": [],
+      "result_line": "PARAM_RTL_RESULT n=4 PASS",
+      "stats_line": "TB n=4 expected=471 checked=471 outputs=471 errors=0",
+      "stats": {
+        "expected": 471,
+        "checked": 471,
+        "outputs": 471,
+        "errors": 0
+      },
+      "status": "pass"
+    },
+    {
+      "n": 8,
+      "source": "results\\integration-tests\\parametric-verilog\\n8-VdotParametric.sv",
+      "source_bytes": 12319,
+      "source_sha256": "5e5caf8219c38c7fbaa5e41d93715a74eff0392cbfbd55754388295b14d255c4",
+      "directed_cases": [
+        {
+          "label": "all_127x127",
+          "expected": 129032
+        },
+        {
+          "label": "all_m128x_m128",
+          "expected": 131072
+        },
+        {
+          "label": "all_m128x127",
+          "expected": -130048
+        },
+        {
+          "label": "all_127x_m128",
+          "expected": -130048
+        },
+        {
+          "label": "zeros",
+          "expected": 0
+        },
+        {
+          "label": "alt_127_m128_x_127",
+          "expected": -508
+        },
+        {
+          "label": "ramp_x_neg_ramp",
+          "expected": -168
+        },
+        {
+          "label": "all_m1x_m1",
+          "expected": 8
+        },
+        {
+          "label": "all_127x_m1",
+          "expected": -1016
+        },
+        {
+          "label": "mixed",
+          "expected": -508
+        }
+      ],
+      "compile_rc": 0,
+      "sim_rc": 0,
+      "fails": [],
+      "result_line": "PARAM_RTL_RESULT n=8 PASS",
+      "stats_line": "TB n=8 expected=479 checked=479 outputs=479 errors=0",
+      "stats": {
+        "expected": 479,
+        "checked": 479,
+        "outputs": 479,
+        "errors": 0
+      },
+      "status": "pass"
+    },
+    {
+      "n": 16,
+      "source": "results\\integration-tests\\parametric-verilog\\n16-VdotParametric.sv",
+      "source_bytes": 18763,
+      "source_sha256": "236db4316254b91e5febb07999525ecb66cb58171ef70b8ab7d69bb627a57c1d",
+      "directed_cases": [
+        {
+          "label": "all_127x127",
+          "expected": 258064
+        },
+        {
+          "label": "all_m128x_m128",
+          "expected": 262144
+        },
+        {
+          "label": "all_m128x127",
+          "expected": -260096
+        },
+        {
+          "label": "all_127x_m128",
+          "expected": -260096
+        },
+        {
+          "label": "zeros",
+          "expected": 0
+        },
+        {
+          "label": "alt_127_m128_x_127",
+          "expected": -1016
+        },
+        {
+          "label": "ramp_x_neg_ramp",
+          "expected": -1360
+        },
+        {
+          "label": "all_m1x_m1",
+          "expected": 16
+        },
+        {
+          "label": "all_127x_m1",
+          "expected": -2032
+        },
+        {
+          "label": "mixed",
+          "expected": -1016
+        }
+      ],
+      "compile_rc": 0,
+      "sim_rc": 0,
+      "fails": [],
+      "result_line": "PARAM_RTL_RESULT n=16 PASS",
+      "stats_line": "TB n=16 expected=449 checked=449 outputs=449 errors=0",
+      "stats": {
+        "expected": 449,
+        "checked": 449,
+        "outputs": 449,
+        "errors": 0
+      },
+      "status": "pass"
+    }
+  ],
+  "mutations": [
+    {
+      "name": "unsigned_extend_result",
+      "compile_rc": 0,
+      "fail_lines": 229,
+      "caught": true,
+      "status": "caught"
+    },
+    {
+      "name": "wrong_valid_latency",
+      "compile_rc": 0,
+      "fail_lines": 139,
+      "caught": true,
+      "status": "caught"
+    },
+    {
+      "name": "duplicate_multiplicand",
+      "compile_rc": 0,
+      "fail_lines": 458,
+      "caught": true,
+      "status": "caught"
+    }
+  ]
+}

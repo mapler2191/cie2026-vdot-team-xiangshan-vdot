@@ -1,0 +1,10 @@
+=== XiangShan commit ===
+16ae9ddcda54fc9a2fddffad73174cf793ac7814
+=== NEMU commit ===
+a48a11f208ff81ad765591d83271d1b339fb3861
+=== Build command ===
+make emu CONFIG=KunminghuV2MinimalConfig JVM_XMX=12G EMU_THREADS=2 -j2
+=== SHA256 ===
+755c80de1eebdd3fad8a20f22838382ace8981554f85e869e7e6333f5ee1bfd3  /home/maple/risv/xs-env/XiangShan/build/emu
+2019d71776cf3457d6c65b62d5289a2324cce55eac819d31abe5642e75af5fad  /home/maple/risv/xs-env/NEMU/build/riscv64-nemu-interpreter-so
+fea548655a8b6eecacace83e2f4380a18b8aa83bce964c8aae4cffbe2f5a9724  /home/maple/risv/artifacts/boot-minimal.bin

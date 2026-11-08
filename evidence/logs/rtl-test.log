@@ -1,0 +1,3 @@
+VCD info: dumpfile results/vdot8.vcd opened for output.
+PASS vectors=69656 checked=69657 cancelled=4 cycles=108440
+tests/tb_vdot8.sv:75: $finish called at 1084400000 (1ps)

@@ -1,0 +1,35 @@
+--- src/isa/riscv64/instr/rvv/vcompute.h.bak	2026-11-04 19:20:17.948730923 +0800
++++ src/isa/riscv64/instr/rvv/vcompute.h	2026-11-04 20:00:48.737591511 +0800
+@@ -28,9 +28,14 @@
+ def_EHelper(vdot) {
+   require_vector(true);
+   fprintf(stderr, "[vdot-ref] vl=%llu vstart=%llu vm=%u vsew=%u vlmul=%u\n", (unsigned long long)vl->val, (unsigned long long)vstart->val, (unsigned)s->vm, (unsigned)vtype->vsew, (unsigned)vtype->vlmul);
+-  if (vtype->vsew != 0 || vtype->vlmul != 0 || vl->val != 8 ||
+-      vstart->val != 0 || s->vm != 1) {
+-    fprintf(stderr, "[vdot-ref] THROW EX_II=%d\n", EX_II);
++  /* Decode-stage illegal: SEW/LMUL/vstart/vm mismatch -> RTL reports instruction word as mtval */
++  if (vtype->vsew != 0 || vtype->vlmul != 0 || vstart->val != 0 || s->vm != 1) {
++    fprintf(stderr, "[vdot-ref] THROW EX_II (decode)\n");
++    longjmp_exception(EX_II);
++  }
++  /* Execute-stage illegal: VL != 8 -> RTL reports mtval=0 */
++  if (vl->val != 8) {
++    fprintf(stderr, "[vdot-ref] THROW EX_II (exec, vl=%llu)\n", (unsigned long long)vl->val);
+     vdot_illegal_no_tval = 1;
+     longjmp_exception(EX_II);
+   }
+--- src/isa/riscv64/system/intr.c.bak	2026-11-04 19:20:17.998846648 +0800
++++ src/isa/riscv64/system/intr.c	2026-11-04 19:20:18.038017000 +0800
+@@ -292,9 +292,9 @@
+       case EX_IGPF: case EX_LGPF: case EX_SGPF:
+         break;
+       case EX_II: case EX_VI:
+-        extern int vdot_illegal_no_tval;
+-        mtval->val = (vdot_illegal_no_tval) ? 0 : MUXDEF(CONFIG_TVAL_EX_II, cpu.instr, 0);
+-        vdot_illegal_no_tval = 0;  // reset after use
++        int vdot_no_tval = vdot_illegal_no_tval;
++        vdot_illegal_no_tval = 0;
++        mtval->val = vdot_no_tval ? 0 : MUXDEF(CONFIG_TVAL_EX_II, cpu.instr, 0);
+         IFDEF(CONFIG_RVH, mtval2->val = 0);
+         IFDEF(CONFIG_RVH, mtinst->val = 0);
+         break;

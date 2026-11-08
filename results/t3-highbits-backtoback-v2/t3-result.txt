@@ -1,0 +1,37 @@
+highbits exit: 0
+The image is /home/maple/risv/project/software/build/highbits-v2.bin
+[HIGHBITS-V2] VL=16 full load, echo, then VL=8 vdot
+[HIGHBITS 0] echo16=ok low=-168 expect_low=-168 upper96=0,0,0 full16_ref=-168 PASS
+[HIGHBITS 1] echo16=ok low=-168 expect_low=-168 upper96=0,0,0 full16_ref=-37312 PASS
+[HIGHBITS 2] echo16=ok low=-168 expect_low=-168 upper96=0,0,0 full16_ref=-130216 PASS
+[HIGHBITS 3] echo16=ok low=-168 expect_low=-168 upper96=0,0,0 full16_ref=27268 PASS
+[RESULT] PASS
+[PERF ][time=               24947] SimTop.l_soc.core_with_l2.core.frontend.inner.bpu.predictors.ras.RASStack: ras_top_mismatch,                    0
+[PERF ][time=               24947] SimTop.l_soc.core_with_l2.core.backend.inner.ctrlBlock.dispatch: BTBMissBubble,                17215
+[PERF ][time=               24947] SimTop.l_soc.core_with_l2.core.memBlock.inner.LoadUnit_0: load_to_load_forward_fail_wakeup_mismatch,                    0
+[PERF ][time=               24947] SimTop.l_soc.core_with_l2.core.memBlock.inner.LoadUnit_0: load_to_load_forward_fail_set_mismatch,                    0
+[PERF ][time=               24947] SimTop.l_soc.core_with_l2.core.memBlock.inner.LoadUnit_1: load_to_load_forward_fail_wakeup_mismatch,                    0
+[PERF ][time=               24947] SimTop.l_soc.core_with_l2.core.memBlock.inner.LoadUnit_1: load_to_load_forward_fail_set_mismatch,                    0
+[PERF ][time=               24947] SimTop.l_soc.core_with_l2.core.memBlock.inner.LoadUnit_2: load_to_load_forward_fail_wakeup_mismatch,                    0
+[PERF ][time=               24947] SimTop.l_soc.core_with_l2.core.memBlock.inner.LoadUnit_2: load_to_load_forward_fail_set_mismatch,                    0
+[PERF ][time=               24947] SimTop.l_soc.l3cacheOpt.slices_0.mshrAlloc: mshr_latency_mCore 0: [32mHIT GOOD TRAP at pc = 0x80000940
+[0m[35mCore-0 instrCnt = 5,112, cycleCnt = 24,944, IPC = 0.204939
+
+backtoback exit: 0
+The image is /home/maple/risv/project/software/build/backtoback.bin
+[BTB] three adjacent vdot words, distinct vd
+[BTB] scalar oracle=-168,204,-4
+[BTB vdot v3] out=-168,0,0,0 expect=-168 PASS
+[BTB vdot v6] out=204,0,0,0 expect=204 PASS
+[BTB vdot v9] out=-4,0,0,0 expect=-4 PASS
+[RESULT] PASS
+[PERF ][time=               14518] SimTop.l_soc.core_with_l2.core.frontend.inner.bpu.predictors.ras.RASStack: ras_top_mismatch,                    0
+[PERF ][time=               14518] SimTop.l_soc.core_with_l2.core.backend.inner.ctrlBlock.dispatch: BTBMissBubble,                12603
+[PERF ][time=               14518] SimTop.l_soc.core_with_l2.core.memBlock.inner.LoadUnit_0: load_to_load_forward_fail_wakeup_mismatch,                    0
+[PERF ][time=               14518] SimTop.l_soc.core_with_l2.core.memBlock.inner.LoadUnit_0: load_to_load_forward_fail_set_mismatch,                    0
+[PERF ][time=               14518] SimTop.l_soc.core_with_l2.core.memBlock.inner.LoadUnit_1: load_to_load_forward_fail_wakeup_mismatch,                    0
+[PERF ][time=               14518] SimTop.l_soc.core_with_l2.core.memBlock.inner.LoadUnit_1: load_to_load_forward_fail_set_mismatch,                    0
+[PERF ][time=               14518] SimTop.l_soc.core_with_l2.core.memBlock.inner.LoadUnit_2: load_to_load_forward_fail_wakeup_mismatch,                    0
+[PERF ][time=               14518] SimTop.l_soc.core_with_l2.core.memBlock.inner.LoadUnit_2: load_to_load_forward_fail_set_mismatch,                    0
+[PERF ][time=       Core 0: [32mHIT GOOD TRAP at pc = 0x800004c0
+[0m[35mCore-0 instrCnt = 2,680, cycleCnt = 14,515, IPC = 0.184637

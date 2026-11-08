@@ -1,0 +1,23 @@
+EXIT CODE: 0
+[PROBE] mtvec set
+[PROBE] before first vsetvli
+[PROBE] after first vsetvli (traps=0)
+[STEP 1] vl0
+[RESULT 1] vl0 traps= mcause=0x0000000000000002 mepc=0x0000000080000204 mtval=0x0000000000000000
+[STEP 2] vl1
+[RESULT 2] vl1 traps=0 mcause=0x0000000000000002 mepc=0x00000000800002dc mtval=0x0000000000000000
+[STEP 3] vl7
+[RESULT 3] vl7 traps=1 mcause=0x0000000000000002 mepc=0x00000000800003b4 mtval=0x0000000000000000
+[STEP 4] vl9
+[RESULT 4] vl9 traps=2 mcause=0x0000000000000002 mepc=0x000000008000048c mtval=0x0000000000000000
+[STEP 5] sew16
+[RESULT 5] sew16 traps=3 mcause=0x0000000000000002 mepc=0x0000000080000564 mtval=0x000000000220a18b
+[STEP 6] lmul2
+[RESULT 6] lmul2 traps=4 mcause=0x0000000000000002 mepc=0x000000008000063c mtval=0x000000000220a18b
+[STEP 7] vstart1
+[RESULT 7] vstart1 traps=5 mcause=0x0000000000000002 mepc=0x0000000080000718 mtval=0x000000000220a18b
+[STEP 8] std-illegal
+[RESULT 8] std-illegal traps=6 mcause=0x0000000000000002 mepc=0x00000000800007ec mtval=0x000000000000007b
+[PROBE] done traps=8 (expect 8)
+[PERF ][time=               90435] SimTop.l_soc.l3cacheOpt.slices_0.mshrAlloc: mshr_lateCore 0: [32mHIT GOOD TRAP at pc = 0x800008ea
+[0m[35mCore-0 instrCnt = 7,683, cycleCnt = 90,432, IPC = 0.084959

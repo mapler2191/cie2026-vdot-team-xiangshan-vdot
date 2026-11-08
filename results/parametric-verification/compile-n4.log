@@ -1,0 +1,3 @@
+# cmd: D:\RISV\tools\oss-cad-suite\bin\iverilog.exe -g2012 -DSYNTHESIS -o C:\Users\lenovo\AppData\Local\Temp\dsh-zKE1oN\paramverify\sim-n4.vvp C:\Users\lenovo\AppData\Local\Temp\dsh-zKE1oN\paramverify\tb-n4.sv D:\RISV\results\integration-tests\n4-verilog\VdotParametric.sv
+# cwd: C:\Users\lenovo\AppData\Local\Temp\dsh-zKE1oN\paramverify
+# rc: 0

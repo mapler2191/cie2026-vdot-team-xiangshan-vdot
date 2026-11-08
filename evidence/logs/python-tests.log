@@ -1,0 +1,9 @@
+test_encoding (test_reference.ReferenceTests.test_encoding) ... ok
+test_extrema (test_reference.ReferenceTests.test_extrema) ... ok
+test_high_lanes_ignored (test_reference.ReferenceTests.test_high_lanes_ignored) ... ok
+test_reject_bad_inputs (test_reference.ReferenceTests.test_reject_bad_inputs) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK

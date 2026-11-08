@@ -1,0 +1,26 @@
+=== 交付物版本信息 ===
+=== 更新日期 ===
+2026-11-06
+=== XiangShan commit ===
+16ae9ddcda54fc9a2fddffad73174cf793ac7814
+=== NEMU commit ===
+a48a11f208ff81ad765591d83271d1b339fb3861
+=== Config ===
+KunminghuV2MinimalConfig
+=== Build command ===
+make emu CONFIG=KunminghuV2MinimalConfig JVM_XMX=12G EMU_THREADS=2 -j2
+=== SHA256（交付版，以此为准） ===
+755c80de1eebdd3fad8a20f22838382ace8981554f85e869e7e6333f5ee1bfd3  build/emu
+740e921394525629ca316336637a951046d59d35f5752ccce2e5d380cdd5e174  build/riscv64-nemu-interpreter-so
+fea548655a8b6eecacace83e2f4380a18b8aa83bce964c8aae4cffbe2f5a9724  boot-minimal.bin
+=== 历史 ===
+2026-10-31 首次正式配置构建。参考库为 2019d71776cf3457d6c65b62d5289a2324cce55eac819d31abe5642e75af5fad（尚未修 mtval 分阶段建模）。
+           该次记录原样保留为 version-info-2026-10-31-initial.txt。
+2026-11-04 修复 mtval 建模并重建参考库，变为 740e921394525629ca316336637a951046d59d35f5752ccce2e5d380cdd5e174。
+           对照用的调试构建 69249b1524ddde67181db4c20dfa3dcfa46a59a41e70c91d320fcc071a93920e 只用于 A/B，见 results/t5-nemu-fixed-regressions/。
+           emu 与 boot flash 两次完全相同，说明 RTL 与启动镜像在交付后没有再改。
+=== 说明 ===
+- 参考库的改动只有 mtval 的异常处理（译码阶段保留指令字、执行阶段 VL 类置 0），
+  计算路径没有变化，补丁见 nemu-tval.patch。
+- emu 哈希与 2026-10-31 记录一致；flash 也一致。
+- 本次回归用的三个二进制哈希同时记在 results/t5b-clean-ref/inputs-before.sha256。

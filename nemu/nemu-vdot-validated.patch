@@ -1,0 +1,164 @@
+diff --git a/src/cpu/cpu-exec.c b/src/cpu/cpu-exec.c
+index bf1b3349..01d82ec5 100644
+--- a/src/cpu/cpu-exec.c
++++ b/src/cpu/cpu-exec.c
+@@ -220,6 +220,7 @@ _Noreturn void longjmp_context(int cause) {
+ }
+ 
+ _Noreturn void longjmp_exception(int ex_cause) {
++  fprintf(stderr, "[ex-jump] ex=%d\n", ex_cause);
+   if (context_idx == 0) {
+     // context_idx == 0 means only the execute loop context saved.
+   #ifdef CONFIG_GUIDED_EXEC
+@@ -844,6 +845,7 @@ void cpu_exec(uint64_t n) {
+     IFDEF(CONFIG_PERF_OPT, update_global());
+ 
+     Loge("Longjmp happened. total insts: %'lu, cpu_exec remain: %'li", get_abs_instr_count(), n_remain_total);
++      fprintf(stderr, "[ex-catch] cause=%d expected=%d remaining=%llu state=%d\n", cause, NEMU_EXEC_EXCEPTION, (unsigned long long)n_remain_total, nemu_state.state);
+   }
+ 
+   while (nemu_state.state == NEMU_RUNNING &&
+@@ -873,7 +875,9 @@ void cpu_exec(uint64_t n) {
+       cause = 0;
+       IFDEF(CONFIG_TDATA1_ETRIGGER, trig_action_t action = check_triggers_etrigger(cpu.TM, g_ex_cause));
+ 
++      fprintf(stderr, "[ex-enter] ex=%lu epc=0x%llx\n", (unsigned long)g_ex_cause, (unsigned long long)prev_s->pc);
+       cpu.pc = raise_intr(g_ex_cause, prev_s->pc);
++      fprintf(stderr, "[ex-return] pc=0x%llx\n", (unsigned long long)cpu.pc);
+       cpu.amo = false; // clean up
+       cpu.pbmt = 0;
+       cpu.isVldst = false;
+diff --git a/src/isa/riscv64/include/isa-all-instr.h b/src/isa/riscv64/include/isa-all-instr.h
+index 2f18ca17..b434df12 100644
+--- a/src/isa/riscv64/include/isa-all-instr.h
++++ b/src/isa/riscv64/include/isa-all-instr.h
+@@ -155,7 +155,7 @@
+ 
+ #ifdef CONFIG_RVV
+ #define VECTOR_INSTR_TERNARY(f) \
+-  f(vadd) f(vsub) f(vrsub) f(vminu) f(vmin) \
++  f(vdot) f(vadd) f(vsub) f(vrsub) f(vminu) f(vmin) \
+   f(vmaxu) f(vmax) f(vand) f(vor) f(vxor) \
+   f(vrgather) f(vrgatherei16) \
+   f(vadc) f(vmadc) f(vsbc) f(vmsbc) \
+diff --git a/src/isa/riscv64/init.c b/src/isa/riscv64/init.c
+index d0fa3460..14cd5dfd 100644
+--- a/src/isa/riscv64/init.c
++++ b/src/isa/riscv64/init.c
+@@ -85,6 +85,9 @@ void init_isa() {
+ #ifdef CONFIG_RV_SMRNMI
+   mnstatus->val = 0;
+   mnstatus->nmie = ISDEF(CONFIG_NMIE_INIT);
++  fprintf(stderr, "[nmie-init-v2] config=%d nmie=%u addr=%p\n",
++    (int)ISDEF(CONFIG_NMIE_INIT),
++    (unsigned)mnstatus->nmie, (void *)&mnstatus->val);
+ #endif //CONFIG_RV_SMRNMI
+ 
+ #ifdef CONFIG_RV_SSTC
+diff --git a/src/isa/riscv64/instr/decode.c b/src/isa/riscv64/instr/decode.c
+index 11290c89..1278652e 100644
+--- a/src/isa/riscv64/instr/decode.c
++++ b/src/isa/riscv64/instr/decode.c
+@@ -97,6 +97,7 @@ def_THelper(main) {
+   def_INSTR_TAB  ("??????? ????? ????? ??? ????? 10100 ??",         op_fp);
+ #endif // CONFIG_FPU_NONE
+ #ifdef CONFIG_RVV
++  def_INSTR_IDTAB("0000001 ????? ????? 010 ????? 00010 11", OP_V, vdot);
+   def_INSTR_IDTAB("??????? ????? ????? ??? ????? 10101 ??", OP_V  , OP_V);
+ #endif // CONFIG_RVV
+ #ifdef CONFIG_RV_AME
+diff --git a/src/isa/riscv64/instr/rvv/vcompute.h b/src/isa/riscv64/instr/rvv/vcompute.h
+index 2bcb6aae..1a762d75 100644
+--- a/src/isa/riscv64/instr/rvv/vcompute.h
++++ b/src/isa/riscv64/instr/rvv/vcompute.h
+@@ -19,6 +19,35 @@
+ #include "vcompute_impl.h"
+ #include "vcommon.h"
+ 
++
++// CIE convention: eight low int8 pairs, int32 result, zero upper 96 bits.
++// Read all sources before writing, so vd may alias either source (or v0).
++// Custom: vdot illegal config exception reports mtval=0 (matches RTL behavior)
++extern int vdot_illegal_no_tval;
++
++def_EHelper(vdot) {
++  require_vector(true);
++  fprintf(stderr, "[vdot-ref] vl=%llu vstart=%llu vm=%u vsew=%u vlmul=%u\n", (unsigned long long)vl->val, (unsigned long long)vstart->val, (unsigned)s->vm, (unsigned)vtype->vsew, (unsigned)vtype->vlmul);
++  if (vtype->vsew != 0 || vtype->vlmul != 0 || vl->val != 8 ||
++      vstart->val != 0 || s->vm != 1) {
++    fprintf(stderr, "[vdot-ref] THROW EX_II=%d\n", EX_II);
++    vdot_illegal_no_tval = 1;
++    longjmp_exception(EX_II);
++  }
++  int32_t sum = 0;
++  for (int i = 0; i < 8; i++) {
++    int32_t a = vreg_b(id_src->reg, i);
++    int32_t b = vreg_b(id_src2->reg, i);
++    if (a >= 128) a -= 256;
++    if (b >= 128) b -= 256;
++    sum += a * b;
++  }
++  set_vreg(id_dest->reg, 0, (uint32_t)sum, 3, 0, 0);
++  set_vreg(id_dest->reg, 1, 0, 3, 0, 0);
++  vstart->val = 0;
++  vp_set_dirty();
++}
++
+ def_EHelper(vadd) {
+   ARITH(ADD, SIGNED)
+ }
+diff --git a/src/isa/riscv64/system/intr.c b/src/isa/riscv64/system/intr.c
+index e662cb1c..0705469f 100644
+--- a/src/isa/riscv64/system/intr.c
++++ b/src/isa/riscv64/system/intr.c
+@@ -1,3 +1,4 @@
++int vdot_illegal_no_tval = 0;
+ /***************************************************************************************
+ * Copyright (c) 2014-2021 Zihao Yu, Nanjing University
+ * Copyright (c) 2020-2022 Institute of Computing Technology, Chinese Academy of Sciences
+@@ -112,6 +113,7 @@ word_t raise_intr(word_t NO, vaddr_t epc) {
+   }
+ #endif
+ #ifdef CONFIG_RV_SMRNMI
++  fprintf(stderr, "[nmie-check] nmie=%d\n", (int)mnstatus->nmie);
+   if (!mnstatus->nmie){
+ #ifdef CONFIG_SHARE
+     IFDEF(CONFIG_RV_SMDBLTRP, cpu.critical_error = true);// this will compare in difftest
+@@ -127,6 +129,8 @@ word_t raise_intr(word_t NO, vaddr_t epc) {
+   bool isNMI = MUXDEF(CONFIG_RV_SMRNMI, cpu.hasNMI && (NO & INTR_BIT), false);
+   bool delegS = intr_deleg_S(NO);
+   bool delegM = !delegS && !isNMI;
++  fprintf(stderr, "[trap-path] NO=%ld delegS=%d delegM=%d isNMI=%d mtvec=0x%lx\n",
++    (long)NO, (int)delegS, (int)delegM, (int)isNMI, (unsigned long)mtvec->val);
+   bool s_EX_DT = MUXDEF(CONFIG_RV_SSDBLTRP, delegS && mstatus->sdt, false);
+   bool m_EX_DT = MUXDEF(CONFIG_RV_SMDBLTRP, delegM && mstatus->mdt, false);
+   word_t trap_pc = 0;
+@@ -269,6 +273,8 @@ word_t raise_intr(word_t NO, vaddr_t epc) {
+ #endif
+     mcause->val = NO;
+     mepc->val = epc;
++    fprintf(stderr, "[trap-M] mcause=%llx mepc=%llx\n",
++      (unsigned long long)mcause->val, (unsigned long long)mepc->val);
+     mstatus->mpp = cpu.mode;
+     mstatus->mpie = mstatus->mie;
+     mstatus->mie = 0;
+@@ -286,7 +292,9 @@ word_t raise_intr(word_t NO, vaddr_t epc) {
+       case EX_IGPF: case EX_LGPF: case EX_SGPF:
+         break;
+       case EX_II: case EX_VI:
+-        mtval->val = MUXDEF(CONFIG_TVAL_EX_II, cpu.instr, 0);
++        extern int vdot_illegal_no_tval;
++        mtval->val = (vdot_illegal_no_tval) ? 0 : MUXDEF(CONFIG_TVAL_EX_II, cpu.instr, 0);
++        vdot_illegal_no_tval = 0;  // reset after use
+         IFDEF(CONFIG_RVH, mtval2->val = 0);
+         IFDEF(CONFIG_RVH, mtinst->val = 0);
+         break;
+@@ -329,6 +337,8 @@ word_t raise_intr(word_t NO, vaddr_t epc) {
+     mnstatus->nmie = 0;
+     mnepc->val = epc;
+     mncause->val = NO;
++    fprintf(stderr, "[trap-RNMI] mncause=%llx mnepc=%llx\n",
++      (unsigned long long)mncause->val, (unsigned long long)mnepc->val);
+     cpu.mode = MODE_M;
+     trap_pc = get_trap_pc(mtvec->val, mncause->val);
+   }

@@ -1,0 +1,1706 @@
+{
+  "config": "MinimalConfig (archive metadata)",
+  "checks": [
+    {
+      "label": "vdot",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_valid",
+      "sample": 2354,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "vdot",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_ready",
+      "sample": 2354,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "vdot",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_bits_pc",
+      "sample": 2354,
+      "actual": "0x80000044",
+      "expected": "0x80000044",
+      "mask": null
+    },
+    {
+      "label": "vdot",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_bits_robIdx_flag",
+      "sample": 2354,
+      "actual": "0x0",
+      "expected": "0x0",
+      "mask": null
+    },
+    {
+      "label": "vdot",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_bits_robIdx_value",
+      "sample": 2354,
+      "actual": "0x1b",
+      "expected": "0x1b",
+      "mask": null
+    },
+    {
+      "label": "vdot",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_bits_pdest",
+      "sample": 2354,
+      "actual": "0x33",
+      "expected": "0x33",
+      "mask": null
+    },
+    {
+      "label": "vdot",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_bits_uopIdx",
+      "sample": 2354,
+      "actual": "0x0",
+      "expected": "0x0",
+      "mask": null
+    },
+    {
+      "label": "vdot",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_bits_numUops",
+      "sample": 2354,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_valid",
+      "sample": 2371,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_ready",
+      "sample": 2371,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_bits_pc",
+      "sample": 2371,
+      "actual": "0x800000b8",
+      "expected": "0x800000b8",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_bits_robIdx_flag",
+      "sample": 2371,
+      "actual": "0x0",
+      "expected": "0x0",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_bits_robIdx_value",
+      "sample": 2371,
+      "actual": "0x1e",
+      "expected": "0x1e",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_bits_pdest",
+      "sample": 2371,
+      "actual": "0x37",
+      "expected": "0x37",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_bits_uopIdx",
+      "sample": 2371,
+      "actual": "0x0",
+      "expected": "0x0",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_bits_numUops",
+      "sample": 2371,
+      "actual": "0x2",
+      "expected": "0x2",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_1_valid",
+      "sample": 2371,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_1_ready",
+      "sample": 2371,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_1_bits_pc",
+      "sample": 2371,
+      "actual": "0x800000b8",
+      "expected": "0x800000b8",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_1_bits_robIdx_flag",
+      "sample": 2371,
+      "actual": "0x0",
+      "expected": "0x0",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_1_bits_robIdx_value",
+      "sample": 2371,
+      "actual": "0x1e",
+      "expected": "0x1e",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_1_bits_pdest",
+      "sample": 2371,
+      "actual": "0x38",
+      "expected": "0x38",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_1_bits_uopIdx",
+      "sample": 2371,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_1_bits_numUops",
+      "sample": 2371,
+      "actual": "0x2",
+      "expected": "0x2",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_valid",
+      "sample": 2373,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_ready",
+      "sample": 2373,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_bits_pc",
+      "sample": 2373,
+      "actual": "0x800000c0",
+      "expected": "0x800000c0",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_bits_robIdx_flag",
+      "sample": 2373,
+      "actual": "0x0",
+      "expected": "0x0",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_bits_robIdx_value",
+      "sample": 2373,
+      "actual": "0x20",
+      "expected": "0x20",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_bits_pdest",
+      "sample": 2373,
+      "actual": "0x39",
+      "expected": "0x39",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_bits_uopIdx",
+      "sample": 2373,
+      "actual": "0x0",
+      "expected": "0x0",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_0_bits_numUops",
+      "sample": 2373,
+      "actual": "0x4",
+      "expected": "0x4",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_1_valid",
+      "sample": 2373,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_1_ready",
+      "sample": 2373,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_1_bits_pc",
+      "sample": 2373,
+      "actual": "0x800000c0",
+      "expected": "0x800000c0",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_1_bits_robIdx_flag",
+      "sample": 2373,
+      "actual": "0x0",
+      "expected": "0x0",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_1_bits_robIdx_value",
+      "sample": 2373,
+      "actual": "0x20",
+      "expected": "0x20",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_1_bits_pdest",
+      "sample": 2373,
+      "actual": "0x3a",
+      "expected": "0x3a",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_1_bits_uopIdx",
+      "sample": 2373,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_1_bits_numUops",
+      "sample": 2373,
+      "actual": "0x4",
+      "expected": "0x4",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_2_valid",
+      "sample": 2374,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_2_ready",
+      "sample": 2374,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_2_bits_pc",
+      "sample": 2374,
+      "actual": "0x800000c0",
+      "expected": "0x800000c0",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_2_bits_robIdx_flag",
+      "sample": 2374,
+      "actual": "0x0",
+      "expected": "0x0",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_2_bits_robIdx_value",
+      "sample": 2374,
+      "actual": "0x20",
+      "expected": "0x20",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_2_bits_pdest",
+      "sample": 2374,
+      "actual": "0x3b",
+      "expected": "0x3b",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_2_bits_uopIdx",
+      "sample": 2374,
+      "actual": "0x2",
+      "expected": "0x2",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_2_bits_numUops",
+      "sample": 2374,
+      "actual": "0x4",
+      "expected": "0x4",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_3_valid",
+      "sample": 2374,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_3_ready",
+      "sample": 2374,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_3_bits_pc",
+      "sample": 2374,
+      "actual": "0x800000c0",
+      "expected": "0x800000c0",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_3_bits_robIdx_flag",
+      "sample": 2374,
+      "actual": "0x0",
+      "expected": "0x0",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_3_bits_robIdx_value",
+      "sample": 2374,
+      "actual": "0x20",
+      "expected": "0x20",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_3_bits_pdest",
+      "sample": 2374,
+      "actual": "0x3c",
+      "expected": "0x3c",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_3_bits_uopIdx",
+      "sample": 2374,
+      "actual": "0x3",
+      "expected": "0x3",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.dispatch.io_fromRename_3_bits_numUops",
+      "sample": 2374,
+      "actual": "0x4",
+      "expected": "0x4",
+      "mask": null
+    },
+    {
+      "label": "vdot",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_0_valid",
+      "sample": 2387,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "vdot",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_0_ready",
+      "sample": 2387,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "vdot",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_0_bits_common_fuOpType",
+      "sample": 2387,
+      "actual": "0x100",
+      "expected": "0x100",
+      "mask": null
+    },
+    {
+      "label": "vdot",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_0_bits_common_robIdx_flag",
+      "sample": 2387,
+      "actual": "0x0",
+      "expected": "0x0",
+      "mask": null
+    },
+    {
+      "label": "vdot",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_0_bits_common_robIdx_value",
+      "sample": 2387,
+      "actual": "0x1b",
+      "expected": "0x1b",
+      "mask": null
+    },
+    {
+      "label": "vdot",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_0_bits_common_pdest",
+      "sample": 2387,
+      "actual": "0x33",
+      "expected": "0x33",
+      "mask": null
+    },
+    {
+      "label": "vdot",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_0_bits_common_vpu_vuopIdx",
+      "sample": 2387,
+      "actual": "0x0",
+      "expected": "0x0",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_0_valid",
+      "sample": 2405,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_0_ready",
+      "sample": 2405,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_0_bits_common_fuOpType",
+      "sample": 2405,
+      "actual": "0x68",
+      "expected": "0x68",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_0_bits_common_robIdx_flag",
+      "sample": 2405,
+      "actual": "0x0",
+      "expected": "0x0",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_0_bits_common_robIdx_value",
+      "sample": 2405,
+      "actual": "0x1e",
+      "expected": "0x1e",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_0_bits_common_pdest",
+      "sample": 2405,
+      "actual": "0x37",
+      "expected": "0x37",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_0_bits_common_vpu_vuopIdx",
+      "sample": 2405,
+      "actual": "0x0",
+      "expected": "0x0",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_0_valid",
+      "sample": 2406,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_0_ready",
+      "sample": 2406,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_0_bits_common_fuOpType",
+      "sample": 2406,
+      "actual": "0x68",
+      "expected": "0x68",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_0_bits_common_robIdx_flag",
+      "sample": 2406,
+      "actual": "0x0",
+      "expected": "0x0",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_0_bits_common_robIdx_value",
+      "sample": 2406,
+      "actual": "0x1e",
+      "expected": "0x1e",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_0_bits_common_pdest",
+      "sample": 2406,
+      "actual": "0x38",
+      "expected": "0x38",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_0_bits_common_vpu_vuopIdx",
+      "sample": 2406,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_1_valid",
+      "sample": 2412,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_1_ready",
+      "sample": 2412,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_1_bits_common_fuOpType",
+      "sample": 2412,
+      "actual": "0x42",
+      "expected": "0x42",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_1_bits_common_robIdx_flag",
+      "sample": 2412,
+      "actual": "0x0",
+      "expected": "0x0",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_1_bits_common_robIdx_value",
+      "sample": 2412,
+      "actual": "0x20",
+      "expected": "0x20",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_1_bits_common_pdest",
+      "sample": 2412,
+      "actual": "0x39",
+      "expected": "0x39",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_1_bits_common_vpu_vuopIdx",
+      "sample": 2412,
+      "actual": "0x0",
+      "expected": "0x0",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_1_valid",
+      "sample": 2413,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_1_ready",
+      "sample": 2413,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_1_bits_common_fuOpType",
+      "sample": 2413,
+      "actual": "0x42",
+      "expected": "0x42",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_1_bits_common_robIdx_flag",
+      "sample": 2413,
+      "actual": "0x0",
+      "expected": "0x0",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_1_bits_common_robIdx_value",
+      "sample": 2413,
+      "actual": "0x20",
+      "expected": "0x20",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_1_bits_common_pdest",
+      "sample": 2413,
+      "actual": "0x3a",
+      "expected": "0x3a",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_1_bits_common_vpu_vuopIdx",
+      "sample": 2413,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_1_valid",
+      "sample": 2420,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_1_ready",
+      "sample": 2420,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_1_bits_common_fuOpType",
+      "sample": 2420,
+      "actual": "0x42",
+      "expected": "0x42",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_1_bits_common_robIdx_flag",
+      "sample": 2420,
+      "actual": "0x0",
+      "expected": "0x0",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_1_bits_common_robIdx_value",
+      "sample": 2420,
+      "actual": "0x20",
+      "expected": "0x20",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_1_bits_common_pdest",
+      "sample": 2420,
+      "actual": "0x3b",
+      "expected": "0x3b",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_1_bits_common_vpu_vuopIdx",
+      "sample": 2420,
+      "actual": "0x2",
+      "expected": "0x2",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_1_valid",
+      "sample": 2427,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_1_ready",
+      "sample": 2427,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_1_bits_common_fuOpType",
+      "sample": 2427,
+      "actual": "0x42",
+      "expected": "0x42",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_1_bits_common_robIdx_flag",
+      "sample": 2427,
+      "actual": "0x0",
+      "expected": "0x0",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_1_bits_common_robIdx_value",
+      "sample": 2427,
+      "actual": "0x20",
+      "expected": "0x20",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_1_bits_common_pdest",
+      "sample": 2427,
+      "actual": "0x3c",
+      "expected": "0x3c",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfScheduler.IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf.io_deqDelay_1_bits_common_vpu_vuopIdx",
+      "sample": 2427,
+      "actual": "0x3",
+      "expected": "0x3",
+      "mask": null
+    },
+    {
+      "label": "vdot",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_in_valid",
+      "sample": 2390,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "vdot",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_in_ready",
+      "sample": 2390,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "vdot",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_in_bits_ctrl_fuOpType",
+      "sample": 2390,
+      "actual": "0x100",
+      "expected": "0x100",
+      "mask": null
+    },
+    {
+      "label": "vdot",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_in_bits_ctrl_vpu_vuopIdx",
+      "sample": 2390,
+      "actual": "0x0",
+      "expected": "0x0",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_in_valid",
+      "sample": 2408,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_in_ready",
+      "sample": 2408,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_in_bits_ctrl_fuOpType",
+      "sample": 2408,
+      "actual": "0x68",
+      "expected": "0x68",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_in_bits_ctrl_vpu_vuopIdx",
+      "sample": 2408,
+      "actual": "0x0",
+      "expected": "0x0",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_in_valid",
+      "sample": 2409,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_in_ready",
+      "sample": 2409,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_in_bits_ctrl_fuOpType",
+      "sample": 2409,
+      "actual": "0x68",
+      "expected": "0x68",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_in_bits_ctrl_vpu_vuopIdx",
+      "sample": 2409,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_in_valid",
+      "sample": 2415,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_in_ready",
+      "sample": 2415,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_in_bits_ctrl_fuOpType",
+      "sample": 2415,
+      "actual": "0x42",
+      "expected": "0x42",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_in_bits_ctrl_vpu_vuopIdx",
+      "sample": 2415,
+      "actual": "0x0",
+      "expected": "0x0",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_in_valid",
+      "sample": 2416,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_in_ready",
+      "sample": 2416,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_in_bits_ctrl_fuOpType",
+      "sample": 2416,
+      "actual": "0x42",
+      "expected": "0x42",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_in_bits_ctrl_vpu_vuopIdx",
+      "sample": 2416,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_in_valid",
+      "sample": 2423,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_in_ready",
+      "sample": 2423,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_in_bits_ctrl_fuOpType",
+      "sample": 2423,
+      "actual": "0x42",
+      "expected": "0x42",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_in_bits_ctrl_vpu_vuopIdx",
+      "sample": 2423,
+      "actual": "0x2",
+      "expected": "0x2",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_in_valid",
+      "sample": 2430,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_in_ready",
+      "sample": 2430,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_in_bits_ctrl_fuOpType",
+      "sample": 2430,
+      "actual": "0x42",
+      "expected": "0x42",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_in_bits_ctrl_vpu_vuopIdx",
+      "sample": 2430,
+      "actual": "0x3",
+      "expected": "0x3",
+      "mask": null
+    },
+    {
+      "label": "vdot",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_in_bits_data_src_0",
+      "sample": 2390,
+      "actual": "0x8b011ebc5b451ecb0706050403020100",
+      "expected": "0x706050403020100",
+      "mask": 18446744073709551615
+    },
+    {
+      "label": "vdot",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_in_bits_data_src_1",
+      "sample": 2390,
+      "actual": "0xf976fe91e7b2665f8f9fafbfcfdfeff",
+      "expected": "0xf8f9fafbfcfdfeff",
+      "mask": 18446744073709551615
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_in_bits_data_src_0",
+      "sample": 2408,
+      "actual": "0xf976fe91e7b2665f8f9fafbfcfdfeff",
+      "expected": "0xf8f9fafbfcfdfeff",
+      "mask": 18446744073709551615
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_in_bits_data_src_1",
+      "sample": 2408,
+      "actual": "0x8b011ebc5b451ecb0706050403020100",
+      "expected": "0x706050403020100",
+      "mask": 18446744073709551615
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_in_bits_data_src_0",
+      "sample": 2409,
+      "actual": "0xf976fe91e7b2665f8f9fafbfcfdfeff",
+      "expected": "0xf8f9fafbfcfdfeff",
+      "mask": 18446744073709551615
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_in_bits_data_src_1",
+      "sample": 2409,
+      "actual": "0x8b011ebc5b451ecb0706050403020100",
+      "expected": "0x706050403020100",
+      "mask": 18446744073709551615
+    },
+    {
+      "label": "vdot",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_out_valid",
+      "sample": 2392,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "vdot",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_out_ready",
+      "sample": 2392,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "vdot",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_out_bits_ctrl_robIdx_flag",
+      "sample": 2392,
+      "actual": "0x0",
+      "expected": "0x0",
+      "mask": null
+    },
+    {
+      "label": "vdot",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_out_bits_ctrl_robIdx_value",
+      "sample": 2392,
+      "actual": "0x1b",
+      "expected": "0x1b",
+      "mask": null
+    },
+    {
+      "label": "vdot",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_out_bits_ctrl_pdest",
+      "sample": 2392,
+      "actual": "0x33",
+      "expected": "0x33",
+      "mask": null
+    },
+    {
+      "label": "vdot",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_out_bits_ctrl_vecWen",
+      "sample": 2392,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "vdot",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_out_bits_res_data",
+      "sample": 2392,
+      "actual": "0xffffff58",
+      "expected": "0xffffff58",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_out_valid",
+      "sample": 2410,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_out_ready",
+      "sample": 2410,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_out_bits_ctrl_robIdx_flag",
+      "sample": 2410,
+      "actual": "0x0",
+      "expected": "0x0",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_out_bits_ctrl_robIdx_value",
+      "sample": 2410,
+      "actual": "0x1e",
+      "expected": "0x1e",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_out_bits_ctrl_pdest",
+      "sample": 2410,
+      "actual": "0x37",
+      "expected": "0x37",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_out_bits_ctrl_vecWen",
+      "sample": 2410,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_out_bits_res_data",
+      "sample": 2410,
+      "actual": "0xffc8ffd6ffe2ffecfff4fffafffe0000",
+      "expected": "0xffc8ffd6ffe2ffecfff4fffafffe0000",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_out_valid",
+      "sample": 2411,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_out_ready",
+      "sample": 2411,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_out_bits_ctrl_robIdx_flag",
+      "sample": 2411,
+      "actual": "0x0",
+      "expected": "0x0",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_out_bits_ctrl_robIdx_value",
+      "sample": 2411,
+      "actual": "0x1e",
+      "expected": "0x1e",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_out_bits_ctrl_pdest",
+      "sample": 2411,
+      "actual": "0x38",
+      "expected": "0x38",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus.Vimac.io_out_bits_ctrl_vecWen",
+      "sample": 2411,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_out_valid",
+      "sample": 2417,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_out_ready",
+      "sample": 2417,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_out_bits_ctrl_robIdx_flag",
+      "sample": 2417,
+      "actual": "0x0",
+      "expected": "0x0",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_out_bits_ctrl_robIdx_value",
+      "sample": 2417,
+      "actual": "0x20",
+      "expected": "0x20",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_out_bits_ctrl_pdest",
+      "sample": 2417,
+      "actual": "0x39",
+      "expected": "0x39",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_out_bits_ctrl_vecWen",
+      "sample": 2417,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_out_bits_res_data",
+      "sample": 2417,
+      "actual": "0xffffffbcffffffd0ffffffe0ffffffec",
+      "expected": "0xffffffbcffffffd0ffffffe0ffffffec",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_out_valid",
+      "sample": 2418,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_out_ready",
+      "sample": 2418,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_out_bits_ctrl_robIdx_flag",
+      "sample": 2418,
+      "actual": "0x0",
+      "expected": "0x0",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_out_bits_ctrl_robIdx_value",
+      "sample": 2418,
+      "actual": "0x20",
+      "expected": "0x20",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_out_bits_ctrl_pdest",
+      "sample": 2418,
+      "actual": "0x3a",
+      "expected": "0x3a",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_out_bits_ctrl_vecWen",
+      "sample": 2418,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_out_bits_res_data",
+      "sample": 2418,
+      "actual": "0x0",
+      "expected": "0x0",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_out_valid",
+      "sample": 2425,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_out_ready",
+      "sample": 2425,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_out_bits_ctrl_robIdx_flag",
+      "sample": 2425,
+      "actual": "0x0",
+      "expected": "0x0",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_out_bits_ctrl_robIdx_value",
+      "sample": 2425,
+      "actual": "0x20",
+      "expected": "0x20",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_out_bits_ctrl_pdest",
+      "sample": 2425,
+      "actual": "0x3b",
+      "expected": "0x3b",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_out_bits_ctrl_vecWen",
+      "sample": 2425,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_out_bits_res_data",
+      "sample": 2425,
+      "actual": "0xffffffbcffffffd0ffffffe0ffffffec",
+      "expected": "0xffffffbcffffffd0ffffffe0ffffffec",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_out_valid",
+      "sample": 2432,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_out_ready",
+      "sample": 2432,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_out_bits_ctrl_robIdx_flag",
+      "sample": 2432,
+      "actual": "0x0",
+      "expected": "0x0",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_out_bits_ctrl_robIdx_value",
+      "sample": 2432,
+      "actual": "0x20",
+      "expected": "0x20",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_out_bits_ctrl_pdest",
+      "sample": 2432,
+      "actual": "0x3c",
+      "expected": "0x3c",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_out_bits_ctrl_vecWen",
+      "sample": 2432,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_out_bits_res_data",
+      "sample": 2432,
+      "actual": "0xffffff58",
+      "expected": "0xffffff58",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_in_bits_data_src_1",
+      "sample": 2415,
+      "actual": "0xffc8ffd6ffe2ffecfff4fffafffe0000",
+      "expected": "0xffc8ffd6ffe2ffecfff4fffafffe0000",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_in_bits_data_src_2",
+      "sample": 2415,
+      "actual": "0x0",
+      "expected": "0x0",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_in_bits_data_src_1",
+      "sample": 2423,
+      "actual": "0xffffffbcffffffd0ffffffe0ffffffec",
+      "expected": "0xffffffbcffffffd0ffffffe0ffffffec",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_1.Vipu.io_in_bits_data_src_1",
+      "sample": 2430,
+      "actual": "0xffffffbcffffffd0ffffffe0ffffffec",
+      "expected": "0xffffffbcffffffd0ffffffe0ffffffec",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_2.VialuFix.io_out_valid",
+      "sample": 2377,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_2.VialuFix.io_out_ready",
+      "sample": 2377,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_2.VialuFix.io_out_bits_ctrl_robIdx_value",
+      "sample": 2377,
+      "actual": "0x19",
+      "expected": "0x19",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_2.VialuFix.io_out_bits_res_data",
+      "sample": 2377,
+      "actual": "0x0",
+      "expected": "0x0",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_2.VialuFix.io_out_valid",
+      "sample": 2378,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_2.VialuFix.io_out_ready",
+      "sample": 2378,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_2.VialuFix.io_out_bits_ctrl_robIdx_value",
+      "sample": 2378,
+      "actual": "0x1a",
+      "expected": "0x1a",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_vfExuBlock.exus_2.VialuFix.io_out_bits_res_data",
+      "sample": 2378,
+      "actual": "0x0",
+      "expected": "0x0",
+      "mask": null
+    },
+    {
+      "label": "vdot",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.rob.io_commits_isCommit",
+      "sample": 2394,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "vdot",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.rob.io_commits_commitValid_0",
+      "sample": 2394,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "vdot",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.rob.io_commits_info_0_debug_pc",
+      "sample": 2394,
+      "actual": "0x80000044",
+      "expected": "0x80000044",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.rob.io_commits_isCommit",
+      "sample": 2413,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.rob.io_commits_commitValid_0",
+      "sample": 2413,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.rob.io_commits_info_0_debug_pc",
+      "sample": 2413,
+      "actual": "0x800000b8",
+      "expected": "0x800000b8",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.rob.io_commits_isCommit",
+      "sample": 2434,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.rob.io_commits_commitValid_0",
+      "sample": 2434,
+      "actual": "0x1",
+      "expected": "0x1",
+      "mask": null
+    },
+    {
+      "label": "baseline",
+      "signal": "TOP.SimTop.l_soc.core_with_l2.core.backend.inner_ctrlBlock.rob.io_commits_info_0_debug_pc",
+      "sample": 2434,
+      "actual": "0x800000c0",
+      "expected": "0x800000c0",
+      "mask": null
+    }
+  ],
+  "input_data": {
+    "vdot": {
+      "b": "fffefdfcfbfaf9f86363636363636363",
+      "a": "00010203040506076363636363636363"
+    },
+    "baseline": {
+      "b": "fffefdfcfbfaf9f86363636363636363",
+      "a": "00010203040506076363636363636363"
+    }
+  },
+  "sha256": {
+    "baseline-latency.fst": "6a6a56fb7c874a12a7297800f81a0367acf7054240d250894a780f064c2d61a9",
+    "baseline-latency.log": "c72ed2d4368fc00991070ccf92b71f7094d6c5979e3dc41a4f57730084e74c28",
+    "baseline-wave.dis": "0fc7688a5a0e02f643e7a19fa34c105786ea6784349d62fa540cddc0c9490fab",
+    "baseline-wave.elf": "e87064d3aea15fbf95fc325d74c03998817b8640b9df337b957f3bb7271f5b03",
+    "vdot-latency.fst": "30f6c75ddaca758c15abf929ede08f7ffa3058e9ea9331a41c21a2f6ff11e550",
+    "vdot-latency.log": "1f860425728c06d51cff893196006a1ca17ccf679a5a52caf296356411d3ffd5",
+    "vdot-wave.dis": "018ea8943545e56466e0850d395820b003fdb30a4d779bdb5ae031e6115ec235",
+    "vdot-wave.elf": "d902dda662f2d54178c41ac37cef51aa6f840fdc767596e9349ce29addc86b26"
+  },
+  "metrics": {
+    "vdot_interval": [
+      2390,
+      2392
+    ],
+    "baseline_interval": [
+      2408,
+      2432
+    ],
+    "observed_ratio": 12,
+    "baseline_reduction_interval": [
+      2415,
+      2432
+    ],
+    "vdot_total": 2448,
+    "baseline_total": 2479
+  }
+}

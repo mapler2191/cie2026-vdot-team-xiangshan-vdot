@@ -1,0 +1,19 @@
+=== exception ===
+Core 0: [32mHIT GOOD TRAP at pc = 0x80000032
+[0m[35mCore-0 instrCnt = 274, cycleCnt = 2,865, IPC = 0.095637
+
+=== vadd ===
+Core 0: [32mHIT GOOD TRAP at pc = 0x80000032
+[0m[35mCore-0 instrCnt = 23,876, cycleCnt = 16,870, IPC = 1.415293
+
+=== vdot ===
+Core 0: [32mHIT GOOD TRAP at pc = 0x80000032
+[0m[35mCore-0 instrCnt = 841,260, cycleCnt = 790,553, IPC = 1.064141
+
+=== debug lines count ===
+exception: 4
+vadd: 1
+vdot: 1
+
+=== hash match ===
+HASH MATCH

@@ -1,0 +1,176 @@
+$comment Emulator cycle samples; not physical ps. $end
+$timescale 1ps $end
+$scope module evidence $end
+$var wire 1 s0 inner_ctrlBlock__dispatch__io_fromRename_0_valid $end
+$var wire 1 s1 inner_ctrlBlock__dispatch__io_fromRename_0_ready $end
+$var wire 50 s2 inner_ctrlBlock__dispatch__io_fromRename_0_bits_pc $end
+$var wire 1 s3 inner_ctrlBlock__dispatch__io_fromRename_0_bits_robIdx_flag $end
+$var wire 6 s4 inner_ctrlBlock__dispatch__io_fromRename_0_bits_robIdx_value $end
+$var wire 8 s5 inner_ctrlBlock__dispatch__io_fromRename_0_bits_pdest $end
+$var wire 7 s6 inner_ctrlBlock__dispatch__io_fromRename_0_bits_uopIdx $end
+$var wire 7 s7 inner_ctrlBlock__dispatch__io_fromRename_0_bits_numUops $end
+$var wire 1 s8 inner_vfScheduler__IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf__io_deqDelay_0_valid $end
+$var wire 1 s9 inner_vfScheduler__IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf__io_deqDelay_0_ready $end
+$var wire 9 s10 inner_vfScheduler__IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf__io_deqDelay_0_bits_common_fuOpType $end
+$var wire 1 s11 inner_vfScheduler__IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf__io_deqDelay_0_bits_common_robIdx_flag $end
+$var wire 6 s12 inner_vfScheduler__IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf__io_deqDelay_0_bits_common_robIdx_value $end
+$var wire 8 s13 inner_vfScheduler__IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf__io_deqDelay_0_bits_common_pdest $end
+$var wire 7 s14 inner_vfScheduler__IssueQueueVfmaVialuFixVimacVppuVfaluVfcvtVipuVsetrvfwvf__io_deqDelay_0_bits_common_vpu_vuopIdx $end
+$var wire 1 s15 inner_vfExuBlock__exus__Vimac__io_in_valid $end
+$var wire 1 s16 inner_vfExuBlock__exus__Vimac__io_in_ready $end
+$var wire 9 s17 inner_vfExuBlock__exus__Vimac__io_in_bits_ctrl_fuOpType $end
+$var wire 7 s18 inner_vfExuBlock__exus__Vimac__io_in_bits_ctrl_vpu_vuopIdx $end
+$var wire 128 s19 inner_vfExuBlock__exus__Vimac__io_in_bits_data_src_0 $end
+$var wire 128 s20 inner_vfExuBlock__exus__Vimac__io_in_bits_data_src_1 $end
+$var wire 1 s21 inner_vfExuBlock__exus__Vimac__io_out_valid $end
+$var wire 1 s22 inner_vfExuBlock__exus__Vimac__io_out_ready $end
+$var wire 1 s23 inner_vfExuBlock__exus__Vimac__io_out_bits_ctrl_robIdx_flag $end
+$var wire 6 s24 inner_vfExuBlock__exus__Vimac__io_out_bits_ctrl_robIdx_value $end
+$var wire 8 s25 inner_vfExuBlock__exus__Vimac__io_out_bits_ctrl_pdest $end
+$var wire 1 s26 inner_vfExuBlock__exus__Vimac__io_out_bits_ctrl_vecWen $end
+$var wire 128 s27 inner_vfExuBlock__exus__Vimac__io_out_bits_res_data $end
+$var wire 1 s28 inner_ctrlBlock__rob__io_commits_isCommit $end
+$var wire 1 s29 inner_ctrlBlock__rob__io_commits_commitValid_0 $end
+$var wire 50 s30 inner_ctrlBlock__rob__io_commits_info_0_debug_pc $end
+$upscope $end
+$enddefinitions $end
+#2348
+b0 s0
+b1 s1
+b00000000000000000010000000000000000000000100000110 s2
+b0 s3
+b010111 s4
+b00010010 s5
+b0000000 s6
+b0000001 s7
+b0 s8
+b1 s9
+b011000000 s10
+b1 s11
+b101100 s12
+b00001010 s13
+b1100010 s14
+b0 s15
+b1 s16
+b011000000 s17
+b1100010 s18
+b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 s19
+b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 s20
+b0 s21
+b1 s22
+b1 s23
+b101100 s24
+b00001010 s25
+b0 s26
+b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 s27
+b1 s28
+b0 s29
+b00000000000000000010000000000000000000000011101000 s30
+#2351
+b1 s0
+b00000000000000000010000000000000000000000000111000 s2
+b011000 s4
+b00000000 s5
+b0000010 s7
+b1 s29
+#2352
+b00000000000000000010000000000000000000000000111100 s2
+b011001 s4
+b00101111 s5
+b00000000000000000010000000000000000000000011101110 s30
+#2353
+b00000000000000000010000000000000000000000001000000 s2
+b011010 s4
+b00110001 s5
+b0 s29
+b00010011000011100111000010100011010101001101110001 s30
+#2354
+b00000000000000000010000000000000000000000001000100 s2
+b011011 s4
+b00110011 s5
+b0000001 s7
+b00000000000000000010000000000000000000000000111000 s30
+#2355
+b00000000000000000010000000000000000000000001001000 s2
+b011100 s4
+b00000000 s5
+b0000010 s7
+#2356
+b00000000000000000010000000000000000000000001001100 s2
+b011101 s4
+b00110100 s5
+b000000000 s10
+b0 s11
+b000000 s12
+b00000000 s13
+b0000000 s14
+#2357
+b0 s0
+#2358
+b1 s29
+#2359
+b1 s0
+b00000000000000000010000000000000000000000100001010 s2
+b011111 s4
+b00010011 s5
+b0000001 s7
+b0 s29
+b00000000000000000010000000000000000000000000111100 s30
+#2360
+b00000000000000000010000000000000000000000100011010 s2
+b100100 s4
+b00011000 s5
+#2361
+b00000000000000000010000000000000000000000100101000 s2
+b101001 s4
+b00011101 s5
+#2362
+b0 s0
+#2385
+b1 s29
+#2386
+b00000000000000000010000000000000000000000001000000 s30
+#2387
+b1 s8
+b100000000 s10
+b011011 s12
+b00110011 s13
+b0 s29
+b00000000000000000010000000000000000000000001000100 s30
+#2388
+b0 s8
+b000000000 s10
+b000000 s12
+b00000000 s13
+#2390
+b1 s15
+b100000000 s17
+b0000000 s18
+b10001011000000010001111010111100010110110100010100011110110010110000011100000110000001010000010000000011000000100000000100000000 s19
+b00001111100101110110111111101001000111100111101100100110011001011111100011111001111110101111101111111100111111011111111011111111 s20
+#2391
+b0 s15
+#2392
+b1 s21
+b0 s23
+b011011 s24
+b00110011 s25
+b1 s26
+b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111101011000 s27
+#2393
+b0 s21
+#2394
+b1 s29
+#2395
+b0 s28
+b0 s29
+b00000000000000000010000000000000000000000001001100 s30
+#2396
+b0 s1
+#2398
+b00000000000000000010000000000000000000000100011100 s30
+#2399
+b00000000000000000010000000000000000000000001001100 s30
+#2400
+b1 s1
+b1 s28
